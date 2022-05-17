@@ -11,7 +11,32 @@ function Estadopaciente(peso,altura){
         diagnostico='obesidad';
     }return diagnostico
 }
-let peso=prompt('Ingrese su peso en kg: ')
-let altura=prompt('ingrese su altura en cm: ')
+function habitos(fuma,ejercicio,toma){
+    let calculo=[];
+    let resultado='';
+    if (fuma.toLowerCase()=="si"){
+        calculo.push(fuma)
+    }
+    if (ejercicio.toLowerCase()=="si"){
+        calculo.push(ejercicio)
+    }
+    if (toma.toLowerCase()=='si'){
+        calculo.push(toma)
+    }
+    if (calculo.length()>=2){
+        resultado="malos habitos"
+    }else {
+        resultado='sin adicciones'
+    }   
+
+
+}
+let peso=prompt('Ingrese su peso en kg: ');
+let altura=prompt('ingrese su altura en cm: ');
 alert('su diagnostico nutricional relacion peso masa segun la medicion MIC es: ')
 alert(Estadopaciente(peso,altura))
+let fuma=prompt('es fumador? ');
+let ejercicio=prompt('realiza ejercicio?: ');
+let toma=prompt("consume alcohol? ")
+alert('el paciente tiene una conducta de: ')
+alert(habitos(fuma,ejercicio,toma))
