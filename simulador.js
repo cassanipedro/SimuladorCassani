@@ -9,7 +9,8 @@ function Estadopaciente(peso,altura){
         diagnostico='sobrepeso';
     }else if(IMC>30){
         diagnostico='obesidad';
-    }return diagnostico
+    }
+    return diagnostico
 }
 function habitos(fuma,ejercicio,toma){
     let calculo=[];
@@ -17,7 +18,7 @@ function habitos(fuma,ejercicio,toma){
     if (fuma.toLowerCase()=="si"){
         calculo.push(fuma)
     }
-    if (ejercicio.toLowerCase()=="si"){
+    if (ejercicio.toLowerCase()=="no"){
         calculo.push(ejercicio)
     }
     if (toma.toLowerCase()=='si'){
@@ -27,9 +28,8 @@ function habitos(fuma,ejercicio,toma){
         resultado="malos habitos"
     }else {
         resultado='sin adicciones'
-    }   
-
-
+    }
+    return resultado   
 }
 let peso=prompt('Ingrese su peso en kg: ');
 let altura=prompt('ingrese su altura en cm: ');
